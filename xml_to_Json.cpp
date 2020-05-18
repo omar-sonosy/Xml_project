@@ -50,7 +50,7 @@ vector<int> sort_children(vector<Node *> &children){
 	vector<int> repeat;
 	string temp;
 	Node * temp_ptr;
-	/*for(int i=0;i< children.size();i++)
+	for(int i=0;i< children.size();i++)
 		for(int j=i+1;j<children.size();j++){
 			if((children[j]->tag_name)<(children[i]->tag_name))
 			{
@@ -58,7 +58,7 @@ vector<int> sort_children(vector<Node *> &children){
 				children[j]=children[i];
 				children[i]=temp_ptr;
 			}
-		}*/
+		}
 
 		if(children.size()>0){
 		temp=children[0]->tag_name;

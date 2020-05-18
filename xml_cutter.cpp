@@ -15,6 +15,7 @@ void xml_cutter(string name)
 	ofstream outfile;
 	string input;
 	string line,temp;
+	string d_q=" ";
 	int start,end;
 	infile.open(name);
 	outfile.open("output.txt");
@@ -45,6 +46,11 @@ void xml_cutter(string name)
 					}
 			}
 			line= input.substr(start,(end-start+1));
+			if(line[0]!='<')
+				for(int i=0;i<line.length();i++){
+					if(line[i]=='"')
+						line.replace(i,1,d_q);
+				}
 			if(line[0]!=' ' || line[1] !=' ' || line[2] !=' ')
 				outfile << line<<endl;
 
